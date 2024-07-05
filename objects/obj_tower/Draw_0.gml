@@ -1,3 +1,5 @@
+/// @description Draws turrent base and gun
+
 draw_self();
 
 // Draws the tower's gun and index depends on if flashed

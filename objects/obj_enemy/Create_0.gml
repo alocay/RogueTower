@@ -1,9 +1,7 @@
-/// @description Initializes tower properties and projectile functions
-
-tower_fire_rate = 1.0;
+enemy_fire_rate = 1.5
 
 direction = image_angle;
-gun_angle = direction;
+gun_angle = direction
 rotation_speed = 0.25;
 is_flashed = false;
 flash_time = 0.2;
@@ -11,9 +9,7 @@ flash_cooldown = flash_time;
 gun_offset_x = 15;
 gun_offset_y = 15;
 bullet_speed = 1.0;
-tower_fire_cooldown = 0;
-target = noone;
-target_range = 500;
+fire_cooldown = 0
 
 create_projectile = function(_gun_angle)
 {
@@ -50,9 +46,9 @@ create_projectile = function(_gun_angle)
 
 shoot_tower = function()
 {
-	if (tower_fire_cooldown <= 0) 
+	if (fire_cooldown <= 0) 
 	{
-		tower_fire_cooldown = tower_fire_rate;
+		fire_cooldown = enemy_fire_rate;
 		create_projectile(gun_angle);
 	}
 }
