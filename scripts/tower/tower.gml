@@ -1,19 +1,26 @@
-/// Increases the fire rate of all towers
-/// @param {real} _pct The percentage fire rate increase
-function increase_fire_rates(_pct) {
-	with(obj_tower) {
-		increase_fire_rate_pct(_pct);
-	}
+function generate_new_location(_a, _b, _inner_radius) {
+	var _a_radius = _a / 2;
+	var _inner_radius_ratio = _inner_radius / _a_radius;
+	var _theta = random_range(0, 2 * pi);
+	
+	var _bcos = power(_b * cos(_theta), 2);
+	var _asin = power(_a * sin(_theta), 2);
+	
+	var _max_radius = (_a * _b) / (sqrt(_bcos + _asin));
+	var _random_radius = _max_radius * sqrt(random_range(_inner_radius_ratio, 1));
+	
+	var _x = _random_radius * cos(_theta);
+	var _y = _random_radius * sin(_theta);
+	
+	return [_x, _y];
 }
 
-/// Increases the projectile damage of all towers
-/// @param {real} _pct The percentage damage increase
-function increase_damag2e(_pct) {
-	with(obj_tower) {
-		increase_projectile_damage_pct(_pct);
-	}
-}
-
-function add_tower(_x, _y) {
-	// TODO: add tower
+function generate_new_coordinate(_outer_radius, _inner_radius) {
+	var _radius = random_range(_inner_radius, _outer_radius);
+	var _theta = random_range(0, 2 * pi);
+	
+	var _x = sqrt(_radius) * cos(_theta);
+	var _y = sqrt(_radius) * sin(_theta);
+	
+	return [_x, _y];
 }

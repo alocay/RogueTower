@@ -13,13 +13,29 @@ if (obj_game_manager.current_game_state != GAME_STATE.PLAYING) {
 	return;
 }
 
-var _potential_target = instance_nearest(x, y, obj_enemy);
-	
-var _is_target_valid = _potential_target != noone
-	&& _potential_target != id
-	&& point_distance(x, y, _potential_target.x, _potential_target.y) <= target_range;
-	
-target = _is_target_valid ? _potential_target : noone;
+var _nearest_enemy_in_view = noone;
+var _closest_distance = noone;
+
+with(obj_enemy) {
+	if (rectangle_in_rectangle(
+		bbox_left, 
+		bbox_top, 
+		bbox_right, 
+		bbox_bottom, 
+		view_xview[0], 
+		view_yview[0], 
+		view_xview[0] + view_wview[0], 
+		view_yview[0] + view_hview[0])) {
+			var _distance = point_distance(other.x, other.y, x, y);
+			if (_distance <= other.target_range 
+				&& (_nearest_enemy_in_view == noone || _distance < _closest_distance)) {
+					_nearest_enemy_in_view = self;
+					_closest_distance = _distance;
+			}
+	}
+}
+
+target = _nearest_enemy_in_view;
 
 if (target) {
 	target.image_blend = c_red;
