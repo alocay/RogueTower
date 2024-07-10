@@ -4,7 +4,7 @@ level = 0;
 experience = 0;
 health = 100;
 attributes = {
-	fire_rate: 3.0,
+	fire_rate: 0.5,
 	projectile_damage: 50.0
 };
 

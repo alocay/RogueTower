@@ -39,6 +39,7 @@
   "name":"Rogue Tower",
   "resources":[
     {"id":{"name":"obj_core","path":"objects/obj_core/obj_core.yy",},},
+    {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy_director","path":"objects/obj_enemy_director/obj_enemy_director.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},},

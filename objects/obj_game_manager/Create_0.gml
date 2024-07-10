@@ -18,11 +18,15 @@ is_showing_rewards = false;
 current_game_state = GAME_STATE.NONE;
 reward_options = [];
 reward_cards = [];
-next_exp_cap = 10;
+next_exp_cap = 1000;
 
 setup_game = function() {
 	current_game_state = GAME_STATE.SETUP;
 	is_setting_up = true;
+	
+	if (!instance_exists(obj_debug_manager)) {
+		instance_create_layer(x, y, "Spawners", obj_debug_manager);
+	}
 	
 	if (!instance_exists(obj_enemy_director)) {
 		instance_create_layer(x, y, "Spawners", obj_enemy_director);
