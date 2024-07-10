@@ -1,6 +1,5 @@
 // Checks if owner has been set
-if (owner == noone)
-{
+if (owner == noone || obj_game_manager.current_game_state != GAME_STATE.PLAYING) {
 	return
 }
 

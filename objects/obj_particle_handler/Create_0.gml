@@ -40,3 +40,25 @@ set_smoke = function()
 	// Updates particle system position
 	part_system_position(particle_sys, x, y);
 }
+
+set_enemy_defeat = function()
+{
+	// Creates explosion particle system
+	particle_sys = part_system_create_layer("Explosions", false, ps_enemy_defeat);
+	// Updates particle system position
+	part_system_position(particle_sys, x, y);
+	
+	// Plays explosion sound effect
+	// var _sound_explosion = audio_play_sound(snd_explosion, 100, false, 0.8);
+}
+
+set_shield_on = function()
+{
+	// Creates explosion particle system
+	particle_sys = part_system_create_layer("Shield", false, ps_shield_glow);
+	// Updates particle system position
+	part_system_position(particle_sys, x, y);
+	
+	// Plays explosion sound effect
+	// var _sound_explosion = audio_play_sound(snd_explosion, 100, false, 0.8);
+}

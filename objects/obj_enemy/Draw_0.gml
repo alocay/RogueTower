@@ -4,8 +4,8 @@ draw_self();
 draw_sprite_ext(
 	spr_enemy_gun, 
 	is_flashed,
-	x + gun_offset_x, 
-	y + gun_offset_y,
+	x, 
+	y,
 	1.0, 
 	1.0, 
 	gun_angle, 

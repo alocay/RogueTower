@@ -9,6 +9,7 @@ wall_buffer = 180;
 speed = 5;
 // Variable used for storing the speed when the game is paused
 last_speed = speed;
+damage = 0;
 
 // Function called when the projectile is fired from a player
 fire = function()
@@ -18,6 +19,7 @@ fire = function()
 	
 	// Sets direction of projectile to the players gun angle
 	direction = owner.gun_angle;
+	damage = owner.projectile_damage;
 	// Sets the angle of the projectile to the direction
 	image_angle = direction;
 	
@@ -25,13 +27,17 @@ fire = function()
 	//hspeed += 10 * speed_dropoff;
 	//vspeed += 10 * speed_dropoff;
 	
-	// Creates a gun flash animation from the muzzel of the players gun
-	//var _new_gun_flash = instance_create_depth(x, y, depth - 1, obj_player_shoot);
-	//_new_gun_flash.owner = owner;
-	//_new_gun_flash.image_angle = direction;
-	
 	// Creates a smoke particle system that will follow the projectile
 	var _new_smoke = instance_create_depth(x, y, depth - 1, obj_particle_handler);
 	_new_smoke.set_smoke();
 	_new_smoke.owner = self;
+}
+
+pause = function() {
+	last_speed = speed;
+	speed = 0;
+}
+
+resume = function() {
+	speed = last_speed;
 }

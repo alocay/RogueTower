@@ -9,7 +9,11 @@ flash_cooldown = flash_time;
 gun_offset_x = 15;
 gun_offset_y = 15;
 bullet_speed = 1.0;
-fire_cooldown = 0
+fire_cooldown = 0;
+current_health = 15;
+speed = 1;
+last_speed = speed;
+exp_value = 10;
 
 create_projectile = function(_gun_angle)
 {
@@ -51,4 +55,22 @@ shoot_tower = function()
 		fire_cooldown = enemy_fire_rate;
 		create_projectile(gun_angle);
 	}
+}
+
+// Function called when the projectile is fired from a player
+destroy_enemy = function()
+{
+	// Creates a smoke particle system that will follow the projectile
+	var _new_explosion= instance_create_depth(x, y, depth, obj_particle_handler);
+	_new_explosion.set_enemy_defeat();
+	_new_explosion.owner = self;
+}
+
+pause = function() {
+	last_speed = speed;
+	speed = 0;
+}
+
+resume = function() {
+	speed = last_speed;
 }
