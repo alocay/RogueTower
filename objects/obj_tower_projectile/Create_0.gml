@@ -13,19 +13,12 @@ damage = 0;
 
 // Function called when the projectile is fired from a player
 fire = function()
-{
-	// Sets sprite to player fireball
-	sprite_index = spr_bullet;
-	
+{	
 	// Sets direction of projectile to the players gun angle
 	direction = owner.gun_angle;
 	damage = owner.projectile_damage;
 	// Sets the angle of the projectile to the direction
 	image_angle = direction;
-	
-	// Adjusts the projectiles speed to factor the players speed
-	//hspeed += 10 * speed_dropoff;
-	//vspeed += 10 * speed_dropoff;
 	
 	// Creates a smoke particle system that will follow the projectile
 	var _new_smoke = instance_create_depth(x, y, depth - 1, obj_particle_handler);

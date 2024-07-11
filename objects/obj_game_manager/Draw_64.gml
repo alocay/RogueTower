@@ -13,8 +13,8 @@ with (obj_core)
 
 if (current_game_state == GAME_STATE.REWARD && !is_showing_rewards && array_length(reward_options) > 0) {
 	for(var _i = 0; _i < array_length(reward_options); _i++) {
-		var _x = (_i * 300) + 50;
-		var _y = 10;
+		var _x = (_i * 300) + 250;
+		var _y = 100;
 	
 		var _new_reward = instance_create_layer(_x, _y, "Rewards", obj_reward_card);
 		array_push(reward_cards, _new_reward);

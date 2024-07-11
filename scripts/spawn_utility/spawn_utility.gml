@@ -14,13 +14,3 @@ function generate_new_location(_a, _b, _inner_radius) {
 	
 	return [_x, _y];
 }
-
-function generate_new_coordinate(_outer_radius, _inner_radius) {
-	var _radius = random_range(_inner_radius, _outer_radius);
-	var _theta = random_range(0, 2 * pi);
-	
-	var _x = sqrt(_radius) * cos(_theta);
-	var _y = sqrt(_radius) * sin(_theta);
-	
-	return [_x, _y];
-}

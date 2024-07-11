@@ -19,18 +19,6 @@ projectile_speed = 1.0;
 projectile_speed = 1.0;
 projectile_damage = 5;
 
-//increase_fire_rate_pct = function(_pct) {
-//	fire_rate = fire_rate * (1 + _pct);
-//}
-
-//increase_fire_rate_flat = function(_amount) {
-//	fire_rate += _amount;
-//}
-
-//increase_projectile_damage_pct = function(_pct) {
-//	projectile_damage = projectile_damage * (1 + _pct);
-//}
-
 create_projectile = function(_gun_angle)
 {
 	// Offsets for players gun position

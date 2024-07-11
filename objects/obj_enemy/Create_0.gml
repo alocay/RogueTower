@@ -12,8 +12,11 @@ bullet_speed = 1.0;
 fire_cooldown = 0;
 current_health = 15;
 speed = 1;
+max_speed = 1;
 last_speed = speed;
 exp_value = 10;
+bounce_back_offset = 0;
+acceleration = 0.05;
 
 create_projectile = function(_gun_angle)
 {

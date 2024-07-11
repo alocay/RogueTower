@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"tower",
+  "%Name":"vectors",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"tower",
+  "name":"vectors",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

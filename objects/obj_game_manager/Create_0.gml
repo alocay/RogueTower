@@ -18,7 +18,7 @@ is_showing_rewards = false;
 current_game_state = GAME_STATE.NONE;
 reward_options = [];
 reward_cards = [];
-next_exp_cap = 1000;
+next_exp_cap = 10;
 
 setup_game = function() {
 	current_game_state = GAME_STATE.SETUP;

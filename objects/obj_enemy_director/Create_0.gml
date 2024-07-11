@@ -10,9 +10,6 @@ cooldown = 0;
 
 // Variable that stores the queue for enemies needing to be spawned
 spawn_points = 0;
-inner_ring_diameter = room_width;
-inner_ring_radius = inner_ring_diameter / 2;
-circles = [];
 
 // Function called when a new enemy is due to be spawned
 spawn_enemy = function()
@@ -42,12 +39,8 @@ get_random_enemy_spawn_point = function() {
 	return [_x, _y];
 }
 
-add_ellipsis_point = function() {
-	var _coords = generate_new_location(400, 100, 100);
-	var _x = _coords[0] + (room_width / 2);
-	var _y = _coords[1] + (room_height / 2);
-	show_debug_message("x: " + string(_x) + ", y: " + string(_y));
-	array_push(circles, [_x, _y]);
+generate_flock = function(_size) {
+	
 }
 
 
