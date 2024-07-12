@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Vector2",
+  "%Name":"logger",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Vector2",
+  "name":"logger",
   "parent":{
     "name":"utils",
     "path":"folders/Scripts/utils.yy",

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tower_parent",
+  "%Name":"obj_enemy_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tower_parent",
+  "name":"obj_enemy_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"tower",
-    "path":"folders/Objects/tower.yy",
+    "name":"Enemy",
+    "path":"folders/Objects/Enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

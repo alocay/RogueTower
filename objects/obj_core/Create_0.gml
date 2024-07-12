@@ -4,7 +4,7 @@ level = 0;
 experience = 0;
 core_health = 100;
 attributes = {
-	fire_rate: 1.5,
+	attacks_per_sec: 0.5,
 	projectile_damage: 10.0
 };
 
@@ -18,18 +18,18 @@ gain_exp = function(_amount) {
 }
 
 increase_fire_rate_pct = function(_pct) {
-	attributes.fire_rate -= attributes.fire_rate * _pct;
+	attributes.attacks_per_sec += attributes.attacks_per_sec * _pct;
 	
 	with(obj_tower_parent) {
-		fire_rate = other.attributes.fire_rate;
+		attacks_per_sec = other.attributes.attacks_per_sec;
 	}
 }
 
 increase_fire_rate_flat = function(_amount) {
-	attributes.fire_rate -= _amount;
+	attributes.attacks_per_sec += _amount;
 	
 	with(obj_tower_parent) {
-		fire_rate = other.attributes.fire_rate;
+		attacks_per_sec = other.attributes.attacks_per_sec;
 	}
 }
 

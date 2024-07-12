@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Vector2",
+  "%Name":"ClawEnemy",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Vector2",
+  "name":"ClawEnemy",
   "parent":{
-    "name":"utils",
-    "path":"folders/Scripts/utils.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

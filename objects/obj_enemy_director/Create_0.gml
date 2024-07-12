@@ -11,7 +11,7 @@ spawn_points = 0;
 spawn_enemy = function()
 {
 	var _random_enemy_coords = get_random_enemy_spawn_point();
-	var _new_enemy = instance_create_layer(_random_enemy_coords[0], _random_enemy_coords[1], "Enemies", obj_enemy, new Enemy());
+	var _new_enemy = instance_create_layer(_random_enemy_coords[0], _random_enemy_coords[1], "Enemies", obj_enemy, new BallisticEnemy());
 	cooldown = cooldown_rate;
 }
 

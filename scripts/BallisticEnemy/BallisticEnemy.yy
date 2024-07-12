@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Vector2",
+  "%Name":"BallisticEnemy",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Vector2",
+  "name":"BallisticEnemy",
   "parent":{
-    "name":"utils",
-    "path":"folders/Scripts/utils.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

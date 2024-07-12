@@ -1,5 +1,5 @@
-function Enemy() : Shooter() constructor {
-	melee_damage = 1;
+function BallisticEnemy() : Shooter() constructor {
+	target_range = 400;
 
 	speed = 1;
 	max_speed = 1;

@@ -7,7 +7,7 @@ with (obj_core)
 {
 	draw_set_colour(c_white);
 	draw_text(10, 10, "Level: " + string(level));
-	draw_text(10, 25, "Fire rate: " + string(attributes.fire_rate));
+	draw_text(10, 25, "Fire rate: " + string(attributes.attacks_per_sec) + "/s");
 	draw_text(10, 40, "Damage: " + string(attributes.projectile_damage));
 	draw_text(10, 55, "Exp: " + string(experience))
 }
