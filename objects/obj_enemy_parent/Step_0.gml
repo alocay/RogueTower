@@ -31,18 +31,28 @@ if (_colliding_projectile) {
 }
 
 var _colliding_shield = instance_place(x, y, obj_shield);
+
+var _opposite_direction = _direction * (((_direction + 180) % 360) / _direction);
+var _edgex = x + (origin_offset * cos(_opposite_direction * (pi / 180)));
+var _edgey = y + (origin_offset * sin(_opposite_direction * (pi / 180)));
+
+draw_circle_color(_edgex, _edgey, 5, c_black, c_black, false);
+
 if (_colliding_shield && _colliding_shield.shield_health > 0) {
+	//var _distance_to_shield_center = point_distance(x, y, _colliding_shield.x, _colliding_shield.y);
+	//_distance_to_shield_center > (_colliding_shield.shield_radius - _colliding_shield.shield_ring_width) 
+	
 	bounce_back_offset = ((_direction + 180) % 360) / _direction;
 	_colliding_shield.take_damage(melee_damage);
 } else if (bounce_back_offset > 0) {
 	
 	speed -= acceleration;
-	last_speed = speed;
 	
 	if (speed < 0.05) {
 		bounce_back_offset = 0;
-		last_speed = speed;
 	}
+	
+	last_speed = speed;
 }
 
 if (speed < max_speed && bounce_back_offset == 0) {

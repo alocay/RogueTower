@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_shield_ring",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":639,
   "bbox_left":0,
   "bbox_right":639,
