@@ -32,8 +32,9 @@ if (_colliding_projectile) {
 }
 
 var _colliding_shield = instance_place(x, y, obj_shield);
-if (_colliding_shield) {
+if (_colliding_shield && _colliding_shield.shield_health > 0) {
 	bounce_back_offset = ((_direction + 180) % 360) / _direction;
+	_colliding_shield.take_damage(melee_damage);
 } else if (bounce_back_offset > 0) {
 	
 	speed -= acceleration;

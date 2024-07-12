@@ -16,26 +16,28 @@ if (obj_game_manager.current_game_state != GAME_STATE.PLAYING) {
 var _nearest_enemy_in_view = noone;
 var _closest_distance = noone;
 
-with(obj_enemy) {
-	if (rectangle_in_rectangle(
-		bbox_left, 
-		bbox_top, 
-		bbox_right, 
-		bbox_bottom, 
-		view_xview[0], 
-		view_yview[0], 
-		view_xview[0] + view_wview[0], 
-		view_yview[0] + view_hview[0])) {
-			var _distance = point_distance(other.x, other.y, x, y);
-			if (_distance <= other.target_range 
-				&& (_nearest_enemy_in_view == noone || _distance < _closest_distance)) {
-					_nearest_enemy_in_view = self;
-					_closest_distance = _distance;
-			}
+if (!instance_exists(target)) {
+	with(obj_enemy) {
+		if (rectangle_in_rectangle(
+			bbox_left, 
+			bbox_top, 
+			bbox_right, 
+			bbox_bottom, 
+			view_xview[0], 
+			view_yview[0], 
+			view_xview[0] + view_wview[0], 
+			view_yview[0] + view_hview[0])) {
+				var _distance = point_distance(other.x, other.y, x, y);
+				if (_distance <= other.target_range 
+					&& (_nearest_enemy_in_view == noone || _distance < _closest_distance)) {
+						_nearest_enemy_in_view = self;
+						_closest_distance = _distance;
+				}
+		}
 	}
-}
 
-target = _nearest_enemy_in_view;
+	target = _nearest_enemy_in_view;
+}
 
 if (target) {
 	target.image_blend = c_red;
@@ -46,10 +48,6 @@ var _prev_angle = gun_angle;
 gun_angle = move_gun(x, y, target, gun_angle, rotation_speed)
 var _angle_delta = abs(_prev_angle - gun_angle);
 is_targetting = _angle_delta > targetting_delta_threshold;
-
-if (is_targetting) {
-	show_debug_message(string(_angle_delta));
-}
 
 if (fire_cooldown > 0) {
 	// reduces the fireing cooldown

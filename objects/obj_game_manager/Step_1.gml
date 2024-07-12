@@ -1,7 +1,7 @@
 /// @description Check if core is dead
 
 with(obj_core) {
-	if (health <= 0) {
+	if (core_health <= 0) {
 		lose_game();
 	}
 }

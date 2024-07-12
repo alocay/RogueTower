@@ -1,16 +1,5 @@
 /// @description Draws GUI
 
-// Loops through the player objects
-with (obj_core)
-{
-	draw_set_colour(c_white);
-	draw_text(10, 10, "Level: " + string(level) + "\n"
-		+ "Exp: " + string(experience) + "\n" 
-		+ "Next @: " + string(other.next_exp_cap) + "\n"
-		+ "Fire rate: " + string(attributes.fire_rate) + "\n"
-		+ "Damage: " + string(attributes.projectile_damage));
-}
-
 if (current_game_state == GAME_STATE.REWARD && !is_showing_rewards && array_length(reward_options) > 0) {
 	for(var _i = 0; _i < array_length(reward_options); _i++) {
 		var _x = (_i * 300) + 250;

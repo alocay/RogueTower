@@ -1,9 +1,5 @@
 /// @description Initialization of enemy director
 
-enum SPAWN_POINTS {
-	
-}
-
 // Variables for cooldown timer that spawns new enemies 
 cooldown_rate = 0.5;
 cooldown = 0;
@@ -15,15 +11,7 @@ spawn_points = 0;
 spawn_enemy = function()
 {
 	var _random_enemy_coords = get_random_enemy_spawn_point();
-	// Creates new enemy object instance
-	var _new_enemy = instance_create_layer(_random_enemy_coords[0], _random_enemy_coords[1], "Enemies", obj_enemy);
-	// Sets new enemy's owner to the spawner it is created from
-	_new_enemy.owner = self;
-	
-	// Decreases the spawn queue
-	// spawn_queue--;
-	
-	// Resets the cooldown for spawner
+	var _new_enemy = instance_create_layer(_random_enemy_coords[0], _random_enemy_coords[1], "Enemies", obj_enemy, new Enemy());
 	cooldown = cooldown_rate;
 }
 
