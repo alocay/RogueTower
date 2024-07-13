@@ -1,17 +1,16 @@
 function BallisticEnemy() : Shooter() constructor {
-	target_range = 400;
+	target_range = 450;
+	type = ACTOR_TYPE.CREATURE_BALLISTIC;
+	projectile_type = PROJECTILE_TYPE.SMALL_BULLET;
+	projectile_speed = 1.0;
+	projectile_damage = 1;
 
+	attacks_per_sec = 2;
 	speed = 1;
 	max_speed = 1;
+	pushed_speed = 0;
 	last_speed = speed;
 	
-	current_health = 15;
 	exp_value = 10;
-	bounce_back_offset = 0;
-	acceleration = 0.05;
 	strength = 1;
-
-	shoot_enemy = function() {
-		// TODO: implement
-	}
 }

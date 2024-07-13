@@ -26,3 +26,10 @@ if (current_game_state == GAME_STATE.REWARD && !is_showing_rewards && array_leng
 	is_showing_rewards = true;
 }
 
+if (current_game_state = GAME_STATE.LOST) {
+	var _room_width_offset = room_width / 3;
+	var _room_height_offset = room_height / 8;
+	var _new_reward = instance_create_layer(_room_width_offset, _room_height_offset, "Rewards", obj_reward_card);
+	_new_reward.set_options("You Lose!", "", REWARD_OPTIONS.TOWER);
+}
+

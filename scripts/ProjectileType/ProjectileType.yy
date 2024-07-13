@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"TowerProjectileFactory",
+  "%Name":"ProjectileType",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"TowerProjectileFactory",
+  "name":"ProjectileType",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

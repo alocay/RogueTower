@@ -24,3 +24,11 @@ if (recharge_cooldown >= _recharge_window) {
 } else {
 	recharge_cooldown += delta_time / 1000000;
 }
+
+var _colliding_projectile = instance_place(x, y, obj_tower_projectile);
+if (_colliding_projectile 
+	&& !object_is_ancestor(_colliding_projectile.owner.object_index, obj_tower_parent) 
+	&& shield_health > 0) {
+	take_damage(_colliding_projectile.damage);
+	instance_destroy(_colliding_projectile);
+}

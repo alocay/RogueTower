@@ -51,7 +51,7 @@ var _attack_window = 1 / attacks_per_sec;
 
 if (attack_cooldown >= _attack_window) {
 	if (target && !is_targetting) {
-		shoot_tower();
+		shoot();
 		attack_cooldown = 0;
 	}
 } else {

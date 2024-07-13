@@ -8,7 +8,7 @@ enum GAME_STATE
 	REWARD,
 	PLACE_TOWER,
 	PAUSED,
-	ENDED
+	LOST
 }
 
 is_ready = false;
@@ -110,7 +110,7 @@ apply_rewards = function(_type) {
 place_tower = function() {
 	current_game_state = GAME_STATE.PLACE_TOWER;
 	with(obj_tower_manager) {
-		start_tower_placement(TOWER_TYPES.BASIC_BALLISTIC);
+		start_tower_placement(ACTOR_TYPE.TOWER_BALLISTIC);
 	}
 }
 
@@ -148,5 +148,5 @@ resume = function() {
 lose_game = function()
 {
 	// Sets the current game state to ended
-	current_game_state = GAME_STATE.ENDED;
+	current_game_state = GAME_STATE.LOST;
 }

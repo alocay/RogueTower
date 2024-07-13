@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"TowerType",
+  "%Name":"ActorType",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"TowerType",
+  "name":"ActorType",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

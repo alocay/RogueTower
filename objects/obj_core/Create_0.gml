@@ -2,10 +2,11 @@
 
 level = 0;
 experience = 0;
-core_health = 100;
+max_core_health = 100;
+core_health = max_core_health;
 attributes = {
 	attacks_per_sec: 0.5,
-	projectile_damage: 10.0
+	projectile_damage: 10
 };
 
 level_up = function (_left_over_exp) {
@@ -15,6 +16,10 @@ level_up = function (_left_over_exp) {
 
 gain_exp = function(_amount) {
 	experience += _amount;
+}
+
+take_damage = function(_amount) {
+	core_health -= _amount;
 }
 
 increase_fire_rate_pct = function(_pct) {

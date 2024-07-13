@@ -1,5 +1,5 @@
 /// @desc The Projectile struct
-/// @param {asset.gmobject} _owner The projectiles owner
+/// @param {asset.GMObject} _owner The projectiles owner
 function Projectile(_owner) constructor {
 	owner = _owner;
 	speed = 5;
@@ -8,7 +8,7 @@ function Projectile(_owner) constructor {
 
 	// Function called when the projectile is fired from a player
 	fire = function()
-	{	
+	{
 		direction = owner.gun_angle;
 		damage = owner.projectile_damage;
 		image_angle = direction;

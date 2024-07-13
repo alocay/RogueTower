@@ -1,13 +1,8 @@
 /// @desc Tower struct
 /// @param {struct} _projectile_factory A projectile factory for towers
-function Tower(_projectile_factory) : Shooter() constructor {
+function Tower() : Shooter() constructor {
 	initialized = false;
-	projectile_factory = _projectile_factory;
-	type = TOWER_TYPES.BASIC_BALLISTIC;
+	type = ACTOR_TYPE.TOWER_BALLISTIC;
 	target_range = 700;
-	
-	/// @desc Shoots a projectile when cooldown is ready
-	shoot_tower = function() {
-		shoot(projectile_factory);
-	}
+	projectile_type = PROJECTILE_TYPE.SMALL_BULLET;
 }

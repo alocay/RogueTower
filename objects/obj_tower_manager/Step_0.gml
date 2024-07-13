@@ -6,7 +6,7 @@ if (obj_game_manager.current_game_state != GAME_STATE.PLACE_TOWER) {
 
 if (is_placing && tower_type != noone) {
 	if (!tower_to_place) {
-		tower_to_place = instance_create_layer(x, y, "Towers", obj_tower, new Tower(projectile_factory));
+		tower_to_place = instance_create_layer(x, y, "Towers", obj_tower, new Tower());
 	}
 	
 	//var _width_offset = tower_to_place.sprite_width / 2;

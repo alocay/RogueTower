@@ -1,6 +1,6 @@
 /// @desc Property bag for projectile object and struct
 /// @param {struct} _struct The projectile struct
-/// @param {asset.gmobject} _object The projectile object
+/// @param {Asset.GMObject} _object The projectile object
 function ProjectileData(_struct, _object) constructor {
 	projectile_struct = _struct;
 	projectile_object = _object;

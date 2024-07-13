@@ -22,6 +22,10 @@ function create_projectile(_gun_angle, _projectile_factory, _owner, _gun_offset_
 
 	// Creates new player projectile from the new positions
 	var _projectile_data = _projectile_factory.get_projectile_by_type(_owner);
-	var _new_projectile = instance_create_layer(x, y, "Projectiles", _projectile_data.object(), _projectile_data.struct());
+	
+	var _projectile_object = _projectile_data.object();
+	var _projectile_struct = _projectile_data.struct();
+	
+	var _new_projectile = instance_create_layer(x, y, "Projectiles", _projectile_object, _projectile_struct);
 	_new_projectile.fire();
 }
