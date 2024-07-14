@@ -59,6 +59,7 @@
     {"id":{"name":"ps_shoot_smoke","path":"particles/ps_shoot_smoke/ps_shoot_smoke.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"ActorType","path":"scripts/ActorType/ActorType.yy",},},
+    {"id":{"name":"ArtilleryEnemy","path":"scripts/ArtilleryEnemy/ArtilleryEnemy.yy",},},
     {"id":{"name":"BallisticEnemy","path":"scripts/BallisticEnemy/BallisticEnemy.yy",},},
     {"id":{"name":"ClawEnemy","path":"scripts/ClawEnemy/ClawEnemy.yy",},},
     {"id":{"name":"create_projectile","path":"scripts/create_projectile/create_projectile.yy",},},

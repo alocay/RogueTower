@@ -21,11 +21,12 @@ function create_projectile(_gun_angle, _projectile_factory, _owner, _gun_offset_
 	var _projectile_pos_y = _theta > 1 ? y - _projectile_adjust_y : y + _projectile_adjust_y;
 
 	// Creates new player projectile from the new positions
-	var _projectile_data = _projectile_factory.get_projectile_by_type(_owner);
+	if (_owner.type == ACTOR_TYPE.CREATURE_BALLISTIC) {
+		logger(_owner);
+		logger(_owner.projectile_obj);
+	}
+	var _projectile = _projectile_factory.get_projectile_by_type(_owner);
 	
-	var _projectile_object = _projectile_data.object();
-	var _projectile_struct = _projectile_data.struct();
-	
-	var _new_projectile = instance_create_layer(x, y, "Projectiles", _projectile_object, _projectile_struct);
+	var _new_projectile = instance_create_layer(x, y, "Projectiles",  _projectile.projectile_obj, _projectile);
 	_new_projectile.fire();
 }

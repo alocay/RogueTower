@@ -7,9 +7,11 @@ function Shooter() : TargetingActor() constructor {
 	rotation_speed = 0.25;
 	
 	projectile_factory = new ProjectileFactory();
-	projectile_type = noone;
+	projectile_type = PROJECTILE_TYPE.SMALL_BULLET;
 	projectile_speed = 1.0;
 	projectile_damage = 0;
+	projectile_scale = 1;
+	projectile_obj = noone;
 	
 	/// @desc Shoots a projectile when cooldown is ready
 	/// @param {struct} _projectile_factory The projectile factory

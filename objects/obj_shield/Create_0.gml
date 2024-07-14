@@ -1,8 +1,8 @@
 /// @description Initialize shield
 
-max_shield_health = 100;
+max_shield_health = 500;
 shield_health = max_shield_health;
-shield_radius = 320;
+shield_radius = sprite_width / 2;
 shield_ring_width = 20;
 repulsion_strength = 3;
 recharge_rate_per_sec = 10;
