@@ -10,14 +10,14 @@ if (in_full_recharge && current_charge >= max_shield_health) {
 	in_full_recharge = false;
 }
 
-var _recharge_window = 1 / recharge_division;
+var _recharge_window = 1 / recharge_rate_per_sec;
 var _recharge_amount = recharge_rate_per_sec / recharge_division;
 
 if (recharge_cooldown >= _recharge_window) {
 	if (!in_full_recharge) {
-		shield_health = clamp(shield_health + _recharge_amount, 0, max_shield_health)
+		shield_health = clamp(shield_health + recharge_amount, 0, max_shield_health)
 	} else {
-		current_charge = clamp(current_charge + _recharge_amount, 0, max_shield_health)
+		current_charge = clamp(current_charge + recharge_amount, 0, max_shield_health)
 	}
 	
 	recharge_cooldown = 0;

@@ -5,7 +5,7 @@ function BallisticEnemy() : Shooter() constructor {
 	projectile_speed = 5;
 	projectile_damage = 1;
 	projectile_scale = 1;
-	projectile_obj = obj_tower_projectile;
+	projectile_obj = obj_ballistic_projectile;
 
 	attacks_per_sec = 2;
 	speed = 1;

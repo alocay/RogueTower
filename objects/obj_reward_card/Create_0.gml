@@ -13,9 +13,5 @@ is_pressed = false;
 title = noone;
 description = noone;
 type = noone;
-
-set_options = function(_title, _description, _type) {
-	title = _title;
-	description = _description;
-	type = _type;
-}
+reward = noone;
+max_text_line_length = 30;

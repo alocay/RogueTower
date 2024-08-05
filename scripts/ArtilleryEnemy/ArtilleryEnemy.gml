@@ -5,7 +5,7 @@ function ArtilleryEnemy() : Shooter() constructor {
 	projectile_speed = 2;
 	projectile_damage = 5;
 	projectile_scale = 4;
-	projectile_obj = obj_tower_projectile;
+	projectile_obj = obj_ballistic_projectile;
 
 	attacks_per_sec = 0.25;
 	speed = 1;

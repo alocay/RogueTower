@@ -1,7 +1,7 @@
 /// @description Initialization of enemy director
 
 // Variables for cooldown timer that spawns new enemies 
-cooldown_rate = 1;
+cooldown_rate = 10000000;
 cooldown = 0;
 creature_factory = new CreatureFactory();
 creature_factory.sort_creatures();

@@ -28,6 +28,10 @@ setup_game = function() {
 		instance_create_layer(x, y, "Managers", obj_debug_manager);
 	}
 	
+	if (!instance_exists(obj_clock)) {
+		instance_create_layer(x, y, "Managers", obj_clock);
+	}
+	
 	if (!instance_exists(obj_enemy_director)) {
 		instance_create_layer(x, y, "Managers", obj_enemy_director);
 	}
@@ -63,7 +67,7 @@ start_game = function() {
 }
 
 calculate_next_experience_cap = function() {
-	next_exp_cap = round(power(next_exp_cap, 1.2))
+	next_exp_cap = round(power(next_exp_cap, 1))
 }
 
 choose_reward = function() {
@@ -107,10 +111,24 @@ apply_rewards = function(_type) {
 	}
 }
 
-place_tower = function() {
+reward_applied = function(_auto_resume) {
+	for (var _i = 0; _i < array_length(reward_cards); _i++) {
+		instance_destroy(reward_cards[_i]);
+	}
+	
+	reward_cards = [];
+	reward_options = [];
+	is_showing_rewards = false;
+	
+	if (_auto_resume) {
+		resume();
+	}
+}
+
+place_tower = function(_tower_type) {
 	current_game_state = GAME_STATE.PLACE_TOWER;
 	with(obj_tower_manager) {
-		start_tower_placement(ACTOR_TYPE.TOWER_BALLISTIC);
+		start_tower_placement(_tower_type);
 	}
 }
 
@@ -124,7 +142,7 @@ tower_placement_complete = function() {
 }
 
 freeze = function() {	
-	with(obj_tower_projectile) {
+	with(obj_ballistic_projectile) {
 		pause();
 	}
 	
@@ -136,7 +154,7 @@ freeze = function() {
 resume = function() {
 	current_game_state = GAME_STATE.PLAYING;
 	
-	with(obj_tower_projectile) {
+	with(obj_ballistic_projectile) {
 		resume();
 	}
 	

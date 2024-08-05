@@ -1,3 +1,5 @@
+return;
+
 if (obj_game_manager.current_game_state != GAME_STATE.PLAYING) {
 	return;
 }
@@ -24,7 +26,7 @@ if (current_health <= 0)
 	}
 }
 
-var _colliding_projectile = instance_place(x, y, obj_tower_projectile);
+var _colliding_projectile = instance_place(x, y, obj_ballistic_projectile);
 if (_colliding_projectile && !object_is_ancestor(_colliding_projectile.owner.object_index, obj_enemy_parent)) {
 	current_health -= _colliding_projectile.damage;
 	instance_destroy(_colliding_projectile);

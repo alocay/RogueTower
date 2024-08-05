@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Arc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Arc",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

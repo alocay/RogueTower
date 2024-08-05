@@ -7,5 +7,5 @@ function Tower() : Shooter() constructor {
 	projectile_type = PROJECTILE_TYPE.SMALL_BULLET;
 	projectile_speed = 5;
 	projectile_scale = 1;
-	projectile_obj = obj_tower_projectile;
+	projectile_obj = obj_ballistic_projectile;
 }

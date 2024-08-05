@@ -1,7 +1,7 @@
 /// @description Reward click
 
-if (obj_game_manager.current_game_state != GAME_STATE.REWARD) {
+if (obj_game_manager.current_game_state != GAME_STATE.REWARD or reward == noone) {
 	return;
 }
 
-obj_game_manager.apply_rewards(type);
+reward.apply();

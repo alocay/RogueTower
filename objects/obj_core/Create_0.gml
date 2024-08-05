@@ -45,3 +45,11 @@ increase_projectile_damage_pct = function(_pct) {
 		projectile_damage = other.attributes.projectile_damage;
 	}
 }
+
+increase_projectile_damage_flat = function(_amount) {
+	attributes.projectile_damage += _amount;
+	
+	with(obj_tower_parent) {
+		projectile_damage = other.attributes.projectile_damage;
+	}
+}

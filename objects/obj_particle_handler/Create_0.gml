@@ -41,6 +41,11 @@ set_smoke = function()
 	part_system_position(particle_sys, x, y);
 }
 
+set_spark = function() {
+	particle_sys = part_system_create_layer("Spark", false, ps_spark);
+	part_system_position(particle_sys, x, y);
+}
+
 set_enemy_defeat = function()
 {
 	// Creates explosion particle system

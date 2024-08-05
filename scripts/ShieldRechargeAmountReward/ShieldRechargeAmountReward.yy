@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ShieldRechargeAmountReward",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ShieldRechargeAmountReward",
+  "parent":{
+    "name":"rewards",
+    "path":"folders/Scripts/rewards.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

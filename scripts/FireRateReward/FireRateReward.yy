@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"FireRateReward",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FireRateReward",
+  "parent":{
+    "name":"rewards",
+    "path":"folders/Scripts/rewards.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

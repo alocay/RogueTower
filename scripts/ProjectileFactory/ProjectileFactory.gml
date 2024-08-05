@@ -7,6 +7,8 @@ function ProjectileFactory() constructor {
 		switch(_owner.projectile_type) {
 			case PROJECTILE_TYPE.SMALL_BULLET:
 				return new Projectile(_owner);
+			case PROJECTILE_TYPE.ARC:
+				return new Arc(_owner);
 			default:
 				throw("Unknown projectile type: " + string(_owner.projectile_type));
 		}
