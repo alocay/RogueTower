@@ -1,25 +1,30 @@
 /// @desc The Projectile struct
-/// @param {asset.GMObject} _owner The projectiles owner
-function Projectile(_owner) constructor {
-	owner = _owner;
+/// @param {Id.Instance} _obj The projectiles owner
+function Projectile(_obj) constructor {
+	owner = noone;
+	projectile_obj = _obj;
+	direction = 0;
+	projectile_speed = 0;
 	speed = 0;
 	last_speed = speed;
 	damage = 0;
-	projectile_obj = _owner.projectile_obj;
-
-	// Function called when the projectile is fired from a player
-	fire = function()
-	{
-		direction = owner.gun_angle;
-		speed = owner.projectile_speed;
-		last_speed = speed;
-		damage = owner.projectile_damage;
-		image_angle = direction;
-		image_xscale = owner.projectile_scale;
-		image_yscale = owner.projectile_scale;
+	type = PROJECTILE_TYPE.NONE;
 	
-		var _new_smoke = instance_create_depth(x, y, depth - 1, obj_particle_handler);
-		_new_smoke.set_smoke();
-		_new_smoke.owner = self;
+	
+	/// @desc Gets the delta for the next x and y positions
+	/// @returns {Struct} The delta of the next x and y positions
+	move_delta = function() {
+		return { 
+			x_delta: speed * cos(degtorad(direction)),
+			y_delta: speed * sin(degtorad(direction))
+		};
+	}
+	
+	shield_hit = function () {
+		with (obj_shield) {
+			return place_meeting(other.projectile_obj.x, other.projectile_obj.y, self) 
+				&& !object_is_ancestor(owner.object_index, obj_tower_parent)
+				&& self.shield_health > 0;
+		}
 	}
 }

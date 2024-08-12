@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Projectile",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"projectile",
+    "path":"folders/Scripts/projectile.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

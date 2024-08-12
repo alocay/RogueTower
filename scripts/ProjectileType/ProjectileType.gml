@@ -1,4 +1,5 @@
 enum PROJECTILE_TYPE {
 	SMALL_BULLET,
-	ARC
+	ARC,
+	NONE
 }

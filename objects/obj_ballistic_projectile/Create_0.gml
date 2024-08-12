@@ -1,8 +1,4 @@
-pause = function() {
-	last_speed = speed;
-	speed = 0;
-}
+event_inherited();
 
-resume = function() {
-	speed = last_speed;
-}
+projectile = new Bullet(self, owner);
+number_of_hits = 0;

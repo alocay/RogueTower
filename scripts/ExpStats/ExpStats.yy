@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ExpStats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ExpStats",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

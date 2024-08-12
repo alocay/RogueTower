@@ -10,6 +10,6 @@ draw_sprite_ext(
 	y,
 	1.0, 
 	1.0, 
-	gun_angle, 
+	tower.gun_angle, 
 	c_white, 
 	image_alpha);

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_projectile",
   "parent":{
-    "name":"utils",
-    "path":"folders/Scripts/utils.yy",
+    "name":"projectile",
+    "path":"folders/Scripts/projectile.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -23,4 +23,36 @@ function TargetingActor() constructor {
 	
 	exp_value = 10;
 	type = noone;
+	
+	/// @desc Default target acquisition function
+	/// @returns {Id.Instance} The acquired target instance or noone if no valid target exists
+	acquire_target = function() {
+		var _nearest_enemy_in_view = noone;
+		var _closest_distance = 100000000;
+
+		if (!instance_exists(target)) {
+			with(obj_enemy) {
+				if (rectangle_in_rectangle(
+					bbox_left, 
+					bbox_top, 
+					bbox_right, 
+					bbox_bottom, 
+					view_xview[0], 
+					view_yview[0], 
+					view_xview[0] + view_wview[0], 
+					view_yview[0] + view_hview[0])) {
+						var _distance = point_distance(other.x, other.y, x, y);
+						if (_distance <= other.target_range 
+							&& (_nearest_enemy_in_view == noone || _distance < _closest_distance)) {
+								_nearest_enemy_in_view = self;
+								_closest_distance = _distance;
+						}
+				}
+			}
+
+			target = _nearest_enemy_in_view;
+		}
+		
+		return target;
+	}
 }

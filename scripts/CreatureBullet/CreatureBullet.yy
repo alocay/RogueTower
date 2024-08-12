@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CreatureBullet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreatureBullet",
+  "parent":{
+    "name":"projectile",
+    "path":"folders/Scripts/projectile.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

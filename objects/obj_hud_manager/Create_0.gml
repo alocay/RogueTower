@@ -1,1 +1,1 @@
-is_visible = true;
+is_visible = false;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BallisticTower",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BallisticTower",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

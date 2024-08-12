@@ -1,10 +1,5 @@
 /// @description Handling exp and leveling
 
-if (!is_ready && !is_setting_up) {
-	setup_game();
-	return;
-}
-
 if (current_game_state == GAME_STATE.PLAYING) {	
 	// Loops through the player objects
 	with (obj_core) {

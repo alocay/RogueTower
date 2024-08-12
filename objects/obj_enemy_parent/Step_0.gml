@@ -1,3 +1,14 @@
+// Checks if the enemy is out of health
+if (current_health <= 0)
+{	
+	// Destroys itself
+	instance_destroy();
+	
+	with(obj_core) {
+		gain_exp(other.exp_value);
+	}
+}
+
 return;
 
 if (obj_game_manager.current_game_state != GAME_STATE.PLAYING) {
@@ -15,20 +26,9 @@ if (bounce_back_offset > 0) {
 	_direction_radians *= bounce_back_offset;
 }
 
-// Checks if the enemy is out of health
-if (current_health <= 0)
-{	
-	// Destroys itself
-	instance_destroy();
-	
-	with(obj_core) {
-		gain_exp(other.exp_value);
-	}
-}
-
 var _colliding_projectile = instance_place(x, y, obj_ballistic_projectile);
 if (_colliding_projectile && !object_is_ancestor(_colliding_projectile.owner.object_index, obj_enemy_parent)) {
-	current_health -= _colliding_projectile.damage;
+	take_damage(_colliding_projectile.damage);
 	instance_destroy(_colliding_projectile);
 }
 
