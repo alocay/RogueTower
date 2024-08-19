@@ -13,7 +13,9 @@ enum GAME_STATE
 
 global.stats = new Stats();
 global.stats.initialize();
-global.ui.y_padding = 15;
+global.ui_values = {
+	y_padding: 15
+}
 
 is_ready = false;
 is_setting_up = false;
@@ -62,6 +64,7 @@ lose_game = function()
 choose_reward = function() {
 	current_game_state = GAME_STATE.REWARD;
 	freeze();
+	logger("choosing...");
 	reward_options = is_initial_reward ? reward_manager.get_initial_options() : reward_manager.get_options();
 }
 

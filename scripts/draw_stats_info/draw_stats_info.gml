@@ -9,7 +9,7 @@ function draw_stats_info(_stats, _start_x, _start_y) {
 		var _label = _stats[_i].label;
 		var _value = global.stats.get_stat(_stats[_i].stat_type, _stats[_i].property);
 		var _ui_label = string(_label) + ": " + string(_value);
-		var _y = _start_y + (_i * global.ui.y_padding);
+		var _y = _start_y + (_i * global.ui_values.y_padding);
 		
 		if (struct_exists(_stats[_i], "units")) {
 			_ui_label += "/" + _stats[_i].units;

@@ -40,7 +40,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"Rogue Tower",
   "resources":[
@@ -80,11 +80,13 @@
     {"id":{"name":"CreatureBullet","path":"scripts/CreatureBullet/CreatureBullet.yy",},},
     {"id":{"name":"CreatureFactory","path":"scripts/CreatureFactory/CreatureFactory.yy",},},
     {"id":{"name":"DamageReward","path":"scripts/DamageReward/DamageReward.yy",},},
+    {"id":{"name":"draw_arc_tower_stats_info","path":"scripts/draw_arc_tower_stats_info/draw_arc_tower_stats_info.yy",},},
     {"id":{"name":"draw_ballistic_tower_stats_info","path":"scripts/draw_ballistic_tower_stats_info/draw_ballistic_tower_stats_info.yy",},},
     {"id":{"name":"draw_core_stats_info","path":"scripts/draw_core_stats_info/draw_core_stats_info.yy",},},
     {"id":{"name":"draw_exp_stats_info","path":"scripts/draw_exp_stats_info/draw_exp_stats_info.yy",},},
     {"id":{"name":"draw_shield_stats_info","path":"scripts/draw_shield_stats_info/draw_shield_stats_info.yy",},},
     {"id":{"name":"draw_stats_info","path":"scripts/draw_stats_info/draw_stats_info.yy",},},
+    {"id":{"name":"draw_tower_stats_info","path":"scripts/draw_tower_stats_info/draw_tower_stats_info.yy",},},
     {"id":{"name":"ExpStats","path":"scripts/ExpStats/ExpStats.yy",},},
     {"id":{"name":"FireRateReward","path":"scripts/FireRateReward/FireRateReward.yy",},},
     {"id":{"name":"logger","path":"scripts/logger/logger.yy",},},
