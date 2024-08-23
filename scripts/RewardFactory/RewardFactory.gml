@@ -3,18 +3,12 @@
 function RewardFactory() constructor {
 	rewards = [
 		{ 
-			option: REWARD_OPTION.DAMAGE_MINOR,
-			type: REWARD_TYPE.FLAT_INCREASE,
-			amount: 5,
 			chance: 0.4,
-			factory: new DamageReward(REWARD_TYPE.FLAT_INCREASE, 5, "Increase all tower damage by 5")
+			factory: new StatReward(REWARD_OPTION.DAMAGE, REWARD_EFFECT.FLAT_INCREASE, 5, "Increase all tower damage by 5")
 		},
 		{ 
-			option: REWARD_OPTION.DAMAGE_MAJOR,
-			type: REWARD_TYPE.FLAT_INCREASE,
-			amount: 10,
 			chance: 0.25,
-			factory: new DamageReward(REWARD_TYPE.FLAT_INCREASE, 10, "Increase all tower damage by 10")
+			factory: new StatReward(REWARD_OPTION.DAMAGE, REWARD_EFFECT.FLAT_INCREASE, 10, "Increase all tower damage by 10")
 		},
 		{ 
 			option: REWARD_OPTION.DAMAGE_MINOR,

@@ -5,9 +5,9 @@ function DamageReward(_type, _amount, _text) : RewardBase() constructor {
 	
 	apply = function () {
 		if (type == REWARD_TYPE.FLAT_INCREASE) {
-			obj_core.increase_projectile_damage_flat(amount);
+			global.stats.base_tower.increase_damage(_amount)
 		} else if (type == REWARD_TYPE.PCT_INCREASE) {
-			obj_core.increase_projectile_damage_pct(amount);
+			global.stats.base_tower.increase_damage_pct(amount);
 		}
 		
 		signal_applied(true);

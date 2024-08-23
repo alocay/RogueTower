@@ -1,5 +1,7 @@
 /// @description Reward card initialization
 
+owner = noone;
+
 // Variable for target scale
 target_scale = 1.0;
 

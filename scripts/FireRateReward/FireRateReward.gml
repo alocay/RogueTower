@@ -5,9 +5,9 @@ function FireRateReward(_type, _amount, _text) : RewardBase() constructor {
 	
 	apply = function () {
 		if (type == REWARD_TYPE.FLAT_INCREASE) {
-			obj_core.increase_fire_rate_flat(amount);
+			global.stats.base_tower.increase_attacks_per_sec(amount);
 		} else if (type == REWARD_TYPE.PCT_INCREASE) {
-			obj_core.increase_fire_rate_pct(amount);
+			global.stats.base_tower.increase_attacks_per_sec_pct(amount);
 		}
 		
 		signal_applied(true);

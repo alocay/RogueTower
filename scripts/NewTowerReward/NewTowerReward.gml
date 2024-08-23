@@ -3,7 +3,10 @@ function NewTowerReward(_tower_type, _text) : RewardBase() constructor {
 	text = _text;
 	
 	apply = function () {
-		obj_game_manager.place_tower(type);
+		with(obj_game_manager) {
+			place_tower(other.type);
+		}
+		
 		signal_applied(false);
 	};
 }

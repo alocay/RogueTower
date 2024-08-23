@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"RewardType",
+  "%Name":"RewardEffect",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"RewardType",
+  "name":"RewardEffect",
   "parent":{
     "name":"rewards",
     "path":"folders/Scripts/rewards.yy",

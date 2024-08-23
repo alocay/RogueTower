@@ -113,6 +113,8 @@ function Stats() constructor {
 				return ballistic_tower;
 			case ACTOR_TYPE.TOWER_ARC:
 				return arc_tower;
+			case ACTOR_TYPE.NONE:
+				return base_tower;
 		}
 		
 		throw("Unknown tower type: " + string(_type));

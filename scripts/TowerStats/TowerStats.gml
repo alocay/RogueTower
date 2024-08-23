@@ -84,4 +84,20 @@ function TowerStats() constructor {
 	increase_max_pierces_pct = function(_pct) {
 		increase_pct("max_pierces", _pct);
 	}
+	
+	increase_projectile_speed = function(_amount) {
+		increase_flat("projectile_speed", _amount);
+	}
+	
+	increase_projectile_speed_pct = function(_pct) {
+		increase_pct("projectile_speed", _pct);
+	}
+	
+	increase_projectile_scale = function(_amount) {
+		increase_flat("projectile_scale", _amount);
+	}
+	
+	increase_projectile_scale_pct = function(_pct) {
+		increase_pct("projectile_scale", _pct);
+	}
 }

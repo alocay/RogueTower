@@ -16,6 +16,7 @@ global.stats.initialize();
 global.ui_values = {
 	y_padding: 15
 }
+global.game_state = GAME_STATE.NONE;
 
 is_ready = false;
 is_setting_up = false;
@@ -29,6 +30,7 @@ reward_manager = new RewardManager();
 
 freeze = function() {
 	current_game_state = GAME_STATE.PAUSED;
+	global.game_state = GAME_STATE.PAUSED;
 	
 	with(obj_projectile) {
 		pause();
@@ -45,6 +47,7 @@ freeze = function() {
 
 resume = function() {
 	current_game_state = GAME_STATE.PLAYING;
+	global.game_state = GAME_STATE.PLAYING;
 	
 	with(obj_ballistic_projectile) {
 		resume();
@@ -59,10 +62,12 @@ lose_game = function()
 {
 	// Sets the current game state to ended
 	current_game_state = GAME_STATE.LOST;
+	global.game_state = GAME_STATE.LOST;
 }
 
 choose_reward = function() {
 	current_game_state = GAME_STATE.REWARD;
+	global.game_state = GAME_STATE.REWARD;
 	freeze();
 	logger("choosing...");
 	reward_options = is_initial_reward ? reward_manager.get_initial_options() : reward_manager.get_options();
@@ -71,6 +76,7 @@ choose_reward = function() {
 setup_game = function() {
 	logger("setting up game");
 	current_game_state = GAME_STATE.SETUP;
+	global.game_state = GAME_STATE.SETUP;
 	is_setting_up = true;
 	
 	if (!instance_exists(obj_debug_manager)) {
@@ -111,6 +117,7 @@ start_game = function() {
 	is_ready = true;
 	is_setting_up = false;
 	current_game_state = GAME_STATE.PLAYING;
+	global.game_state = GAME_STATE.PLAYING;
 }
 
 calculate_next_experience_cap = function() {
@@ -119,6 +126,7 @@ calculate_next_experience_cap = function() {
 
 place_tower = function(_tower_type) {
 	current_game_state = GAME_STATE.PLACE_TOWER;
+	global.game_state = GAME_STATE.PLACE_TOWER;
 	with(obj_tower_manager) {
 		start_tower_placement(_tower_type);
 	}
@@ -159,11 +167,7 @@ place_tower = function(_tower_type) {
 //	}
 //}
 
-reward_applied = function(_auto_resume) {
-	for (var _i = 0; _i < array_length(reward_cards); _i++) {
-		instance_destroy(reward_cards[_i]);
-	}
-	
+reward_applied = function(_auto_resume) {	
 	reward_cards = [];
 	reward_options = [];
 	is_showing_rewards = false;

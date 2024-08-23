@@ -33,14 +33,6 @@ function ShieldStats() constructor {
 		repulsion_strength += repulsion_strength * _pct;
 	}
 
-	increase_repulsion_strength = function(_amount) {
-		repulsion_strength += _amount;
-	}
-
-	increase_repulsion_strength_pct = function(_pct) {
-		repulsion_strength += repulsion_strength * _pct;
-	}
-
 	increase_recharge_amount = function(_amount) {
 		recharge_amount += _amount;
 	}
